@@ -1,9 +1,11 @@
 import React from 'react';
 import CssClasses from './Burger.css';
+//import {withRouter} from 'react-router-dom';
 import BurgerIngredient from '../Burger/BurgerIngredients/BurgerIngredients'
 
+//wrap at export burger with withRouter to pass on the routing props from burgerbuilder to burger.
 const burger = (props) => {
-
+    //console.log(props);
     let transformedIngredient = Object.keys(props.ingredients).map(
         igKey => {
             return [...Array(props.ingredients[igKey])].map((_, i) => {
