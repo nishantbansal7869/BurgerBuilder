@@ -1,13 +1,15 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 import CssClass from './NavigationItem.css';
 
 const navingatonItem = (props) => (
     <li
     className={CssClass.NavigationItem}>
-        <a 
-        className={props.active?CssClass.active:null}
-        href={props.link }>
-            {props.children}</a>
+        <NavLink
+        activeClassName={CssClass.active}
+        to={props.link }
+        exact>
+            {props.children}</NavLink>
         </li>
 );
 
